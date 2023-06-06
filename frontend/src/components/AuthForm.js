@@ -19,7 +19,9 @@ function AuthForm() {
           <input id="password" type="password" name="password" required />
         </p>
         <div className={classes.actions}>
-          <Link to="?mode=signup">{isLogin ? "Create new user" : "Login"}</Link>
+          <Link to={`?mode=${isLogin ? "signup" : "login"}`}>
+            {isLogin ? "Create new user" : "Login"}
+          </Link>
           <button>Save</button>
         </div>
       </Form>
