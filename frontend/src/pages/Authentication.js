@@ -32,4 +32,10 @@ export async function action({ request }) {
   if (response.status === 422 || response.status === 401) {
     return response;
   }
+
+  if (!response.ok) {
+    throw json({ message: "Could not authenicate user" }, { status: 500 });
+  }
+
+  // soon: manage that token
 }
