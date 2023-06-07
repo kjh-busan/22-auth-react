@@ -23,7 +23,7 @@ export async function action({ request }) {
 
   const response = await fetch("http://localhost:8080/login" + mode, {
     method: "POST",
-    header: {
+    headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(authData),
