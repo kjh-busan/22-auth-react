@@ -1,4 +1,4 @@
-import { json } from "react-router-dom";
+import { json, redirect } from "react-router-dom";
 import AuthForm from "../components/AuthForm";
 
 function AuthenticationPage() {
@@ -38,4 +38,5 @@ export async function action({ request }) {
   }
 
   // soon: manage that token
+  return redirect("/");
 }
