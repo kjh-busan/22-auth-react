@@ -5,6 +5,7 @@ import classes from "./AuthForm.module.css";
 function AuthForm() {
   const data = useActionData();
   const navigation = useNavigation();
+  const isSubmitting = navigation.state === "submitting";
 
   const [searchParams] = useSearchParams();
   const isLogin = searchParams.get("mode") === "login";
