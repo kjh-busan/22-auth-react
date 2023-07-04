@@ -18,9 +18,14 @@ function AuthForm() {
 
   return (
     <>
-    
-      <Form method="post" className={classes.form}>
+
+
+
+
+
+              <Form method="post" className={classes.form}>
         <h1>{isLogin ? "Log in" : "Create a new user"}</h1>
+        <div>KJH</div>
         {data && data.errors && (
           <ul>
             {Object.values(data.errors).map((err) => (
