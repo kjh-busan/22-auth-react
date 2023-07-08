@@ -1,10 +1,9 @@
-import { Form, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import classes from "./MainNavigation.module.css";
 import NewsletterSignup from "./NewsletterSignup";
 
 function MainNavigation() {
-  getAuthToken();
   return (
     <header className={classes.header}>
       <nav>
@@ -32,12 +31,12 @@ function MainNavigation() {
           </li>
           <li>
             <NavLink
-              to="/auth"
+              to="/newsletter"
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
             >
-              Authentication
+              Newsletter
             </NavLink>
           </li>
         </ul>
