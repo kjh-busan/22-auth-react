@@ -14,15 +14,7 @@ import RootLayout from "./pages/Root";
 import { action as manipulateEventAction } from "./components/EventForm";
 import NewsletterPage, { action as newsletterAction } from "./pages/Newsletter";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <RootLayout />,
-    errorElement: <ErrorPage />,
-    children: [
-    
-  },
-]);
+const router = createBrowserRouter([]);
 
 function App() {
   return <RouterProvider router={router} />;
