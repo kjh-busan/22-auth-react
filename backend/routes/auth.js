@@ -6,17 +6,6 @@ router.post("/signup", async (req, res, next) => {
 
   // auth tests
 
-  try {
-    const createdUser = await add(data);
-    const authToken = createJSONToken(createdUser.email);
-    res
-      .status(201)
-      .json({ message: "User created.", user: createdUser, token: authToken });
-  } catch (error) {
-    next(error);
-  }
-});
-
 router.post("/login", async (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
