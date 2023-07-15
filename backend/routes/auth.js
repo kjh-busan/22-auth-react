@@ -1,11 +1,6 @@
-const express = require('express');
-const { add, get } = require('../data/user');
-const { createJSONToken, isValidPassword } = require('../util/auth');
-const { isValidEmail, isValidText } = require('../util/validation');
-
 const router = express.Router();
 
-router.post('/signup', async (req, res, next) => {
+router.post("/signup", async (req, res, next) => {
   const data = req.body;
   let errors = {};
 
@@ -43,7 +38,7 @@ router.post('/signup', async (req, res, next) => {
   }
 });
 
-router.post('/login', async (req, res) => {
+router.post("/login", async (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
 
@@ -51,14 +46,14 @@ router.post('/login', async (req, res) => {
   try {
     user = await get(email);
   } catch (error) {
-    return res.status(401).json({ message: 'Authentication failed.' });
+    return res.status(401).json({ message: "Authentication failed." });
   }
 
   const pwIsValid = await isValidPassword(password, user.password);
   if (!pwIsValid) {
     return res.status(422).json({
-      message: 'Invalid credentials.',
-      errors: { credentials: 'Invalid email or password entered.' },
+      message: "Invalid credentials.",
+      errors: { credentials: "Invalid email or password entered." },
     });
   }
 
