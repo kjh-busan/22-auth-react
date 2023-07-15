@@ -6,9 +6,6 @@ router.post("/signup", async (req, res, next) => {
 
   // auth tests
 
-router.post("/login", async (req, res) => {
-  const email = req.body.email;
-  const password = req.body.password;
 
   let user;
   try {
