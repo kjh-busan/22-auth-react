@@ -4,27 +4,6 @@ router.post("/signup", async (req, res, next) => {
   const data = req.body;
   let errors = {};
 
-  if (!isValidEmail(data.email)) {
-    errors.email = "Invalid email.";
-  } else {
-    try {
-      const existingUser = await get(data.email);
-      if (existingUser) {
-        errors.email = "Email exists already.";
-      }
-    } catch (error) {}
-  }
-
-  if (!isValidText(data.password, 6)) {
-    errors.password = "Invalid password. Must be at least 6 characters long.";
-  }
-
-  if (Object.keys(errors).length > 0) {
-    return res.status(422).json({
-      message: "User signup failed due to validation errors.",
-      errors,
-    });
-  }
   // auth tests
 
   try {
