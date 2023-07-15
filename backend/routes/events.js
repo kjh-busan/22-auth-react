@@ -8,8 +8,6 @@ const {
   isValidImageUrl,
 } = require('../util/validation');
 
-const router = express.Router();
-
 router.get('/', async (req, res, next) => {
   console.log(req.token);
   try {
