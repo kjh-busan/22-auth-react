@@ -1,9 +1,3 @@
-const {
-  isValidText,
-  isValidDate,
-  isValidImageUrl,
-} = require("../util/validation");
-
 router.get("/", async (req, res, next) => {
   console.log(req.token);
   try {
