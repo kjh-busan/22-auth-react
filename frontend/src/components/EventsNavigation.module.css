@@ -4,11 +4,6 @@
   justify-content: center;
 }
 
-.list {
-  display: flex;
-  gap: 1rem;
-}
-
 .list a {
   background-color: var(--color-gray-500);
   color: var(--color-gray-900);
