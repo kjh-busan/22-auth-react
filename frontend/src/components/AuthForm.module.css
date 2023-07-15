@@ -3,12 +3,6 @@
   margin: 2rem auto;
 }
 
-.form label,
-.form input,
-.form textarea {
-  display: block;
-  width: 100%;
-}
 
 .form input,
 .form textarea {
