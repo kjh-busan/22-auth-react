@@ -6,7 +6,6 @@ function EventsRootLayout() {
   return (
     <>
       <EventsNavigation />
-      <Outlet />
     </>
   );
 }
