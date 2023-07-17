@@ -25,10 +25,7 @@ function EventsPage() {
   }, []);
   return (
     <>
-      <div style={{ textAlign: "center" }}>
-        {isLoading && <p>Loading...</p>}
-        {error && <p>{error}</p>}
-      </div>
+      <div style={{ textAlign: "center" }}></div>
       {!isLoading && fetchedEvents && <EventsList events={fetchedEvents} />}
     </>
   );
