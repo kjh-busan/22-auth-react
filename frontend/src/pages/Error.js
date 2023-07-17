@@ -13,10 +13,6 @@ function ErrorPage() {
     message = error.data.message;
   }
 
-  if (error.status === 404) {
-    title = 'Not found!';
-    message = 'Could not find resource or page.';
-  }
 
   return (
     <>
