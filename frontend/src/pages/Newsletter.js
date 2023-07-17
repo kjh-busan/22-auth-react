@@ -1,8 +1,4 @@
-import NewsletterSignup from "../components/NewsletterSignup";
-
-function NewsletterPage() {
-  return <PageContent title="Join our awesome newsletter!"></PageContent>;
-}
+function NewsletterPage() {}
 
 export default NewsletterPage;
 
