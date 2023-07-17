@@ -67,14 +67,7 @@ async function loadEvents() {
   }
 }
 
-export async function loader({ request, params }) {
-  const id = params.eventId;
-
-  return defer({
-    event: await loadEvent(id),
-    events: loadEvents(),
-  });
-}
+export async function loader({ request, params }) {}
 
 export async function action({ params, request }) {
   const eventId = params.eventId;
