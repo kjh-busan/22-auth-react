@@ -4,6 +4,6 @@ export function getAuthToken() {
 }
 
 export function tokenLoader() {
-    getAuthToken();
-    console.log("auth token loaded");
+  // getAuthToken();
+  console.log("auth token loaded");
 }
