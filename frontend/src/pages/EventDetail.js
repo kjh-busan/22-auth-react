@@ -73,9 +73,7 @@ export async function action({ params, request }) {
   const eventId = params.eventId;
   const response = await fetch("http://localhost:8080/events/" + eventId, {
     method: request.method,
-    headers: {
-      Authorization: "Bearer " + token,
-    },
+    headers: {},
   });
 
   if (!response.ok) {
