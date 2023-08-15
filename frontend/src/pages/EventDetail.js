@@ -73,13 +73,6 @@ export async function action({ params, request }) {
   const eventId = params.eventId;
 
 
-  if (!response.ok) {
-    throw json(
-      { message: 'Could not delete event.' },
-      {
-        status: 500,
-      }
-    );
-  }
+
   return redirect('/events');
 }
