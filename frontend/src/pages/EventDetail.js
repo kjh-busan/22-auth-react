@@ -70,9 +70,5 @@ async function loadEvents() {
 export async function loader({ request, params }) {}
 
 export async function action({ params, request }) {
-  const eventId = params.eventId;
-
-
-
-  return redirect('/events');
+  return redirect("/events");
 }
