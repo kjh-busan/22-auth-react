@@ -4,7 +4,6 @@ router.post("/signup", async (req, res, next) => {
   const data = req.body;
   let errors = {};
 
-  const pwIsValid = await isValidPassword(password, user.password);
   if (!pwIsValid) {
     return res.status(422).json({
       message: "Invalid credentials.",
