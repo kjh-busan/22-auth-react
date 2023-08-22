@@ -4,6 +4,3 @@ class NotFoundError {
     this.status = 404;
   }
 }
-
-exports.NotFoundError = NotFoundError;
-exports.NotAuthError = NotAuthError;
