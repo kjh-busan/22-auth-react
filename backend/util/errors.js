@@ -1,3 +1,6 @@
 class NotFoundError {
-  constructor(message) {}
+  constructor(message) {
+    this.message = message;
+    this.status = 404;
+  }
 }
